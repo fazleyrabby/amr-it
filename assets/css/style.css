@@ -48,12 +48,6 @@ body{
     height: 100vh;
 }
 
-#home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .navbar{
     height: 70px;
 }
@@ -162,21 +156,9 @@ body{
 }
 
 
-section#home{
-    min-height: 100vh;
-}
 
-section{
-    min-height: 100vh;
-    padding-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.service_icon i {
-    font-size: 5rem;
-}
+
 
 .navbar-brand{
     font-family: var(--logo-font);
@@ -207,10 +189,7 @@ section{
     transform: translateX(0);
 }
 
-/* #navbarNav{
-    margin-top: 20px;
-    z-index: 100;
-} */
+
 .nav-item a{
     color: var(--dark-color);
     transition: all 0.5s;
@@ -223,12 +202,105 @@ section{
     font-size: 25px;
 }
 
-
-
 .show{
     background-color: var(--secondary-color);
 
 }
+
+span.animation-title{
+    transform: translateY(20%);
+    font-weight: bold;
+}
+
+span.animation-title::after,
+span.animation-title::before
+{
+    animation-delay: 0.4s;
+}
+
+.animation-title{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: animateTitle 1s forwards;
+}
+
+.animation-title::before,
+.animation-title::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    clip-path: polygon(32% 0, 100% 3%, 100% 100%, 0% 100%);
+}
+.animation-title::before{
+    background-color: var(--white);
+    animation: showTitle 0.8s ease;
+}
+.animation-title::after{
+    background-color: var(--dark-color);
+    animation-delay: 0.5s;
+    animation: showTitle 0.6s ease;
+}
+
+
+@keyframes animateTitle{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes showTitle{
+    0%{
+        width: 0;
+        left: 0;
+        transform: translateX(0);
+    }
+    50%{
+        width: 100%;
+        transform: translateX(12%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+/* SECTION  */
+
+
+section#home{
+    min-height: 100vh;
+}
+
+section{
+    min-height: 100vh;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_icon i {
+    font-size: 5rem;
+}
+
+
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 @media (max-width: 768px){
