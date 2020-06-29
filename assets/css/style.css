@@ -2792,3 +2792,27 @@ footer .text,
   transition: all 0.3s ease-in-out;
   z-index: 1;
 }
+
+.stack-list img{
+  width: 60px;
+  margin-right: 20px;
+}
+
+.stack-list li {
+  padding: 10px 20px;
+  color:#111;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-header{
+  background: #5C1F87;
+  color: #fff;
+}
+
+.card{
+  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.2);
+  border: none;
+  overflow: hidden;
+}
