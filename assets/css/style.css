@@ -2818,7 +2818,7 @@ footer .text,
 }
 
 .navbar-brand img{
-  width: 65%;
+  width: 200px;
 }
 
 @media (max-width: 600px) {
