@@ -2816,3 +2816,13 @@ footer .text,
   border: none;
   overflow: hidden;
 }
+
+.navbar-brand img{
+  width: 65%;
+}
+
+@media (max-width: 600px) {
+  .navbar-brand img{
+    width: 150px;
+  }
+}
